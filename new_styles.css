@@ -1,0 +1,463 @@
+:root {
+    --bg: #fefefe;
+    --sand: #e3d4c4;
+    --profilecard: #f2e2d1;
+    --card: #f5ece3;
+    --text: #1d1d1f;
+    --muted: #7a7a7d;
+    --divider: #0f57ff;
+    --shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+  }
+  
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw 40px;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 24px;
+  }
+  
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+  
+  .brand-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: #0f57ff;
+    display: inline-block;
+  }
+  
+  .brand-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+
+  .brand-separator {
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--muted);
+  }
+
+  .brand-role {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+  
+  .site-nav {
+    display: inline-flex;
+    gap: 28px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .site-nav a {
+    color: #555;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .site-nav a.is-active,
+  .site-nav a:hover {
+    color: #4f63ff;
+  }
+  
+  .hero {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 80px;
+  }
+  
+  .hero-bg {
+    display: none;
+  }
+  
+  .profile-card {
+    width: 300px;
+    min-height: 450px;
+    background: var(--profilecard);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 36px 32px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    margin: 40px 0 40px 40px;
+  }
+  
+  .avatar-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.0;
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+  
+  .profile-title {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+  
+  .profile-divider {
+    width: 50px;
+    height: 3px;
+    background: var(--divider);
+    border-radius: 999px;
+  }
+  
+  .profile-socials {
+    display: inline-flex;
+    gap: 16px;
+    margin-top: auto;
+  }
+  
+  .icon-link {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+    color: #222;
+  }
+  
+  .icon-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  
+  .icon-link:hover {
+    background: #fff;
+    color: #0f57ff;
+  }
+  
+  .hero-content {
+    max-width: 480px;
+    z-index: 1;
+    margin: 40px 60px 40px 40px;
+    /* Card styling - currently disabled */
+    /* background: var(--card);
+    border-radius: 8px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease; */
+  }
+
+  /* .hero-content:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .eyebrow {
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  
+  h1 {
+    margin: 0 0 24px;
+    font-size: clamp(3rem, 4vw, 4.5rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  .cta-row {
+    display: inline-flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .btn {
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .btn.primary {
+    background: #0f57ff;
+    color: #fff;
+  }
+  
+  .btn.secondary {
+    background: transparent;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+  }
+  
+  .btn.secondary.is-active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+  
+  .hero-text {
+    margin: 0 0 12px;
+    color: #3a3a3d;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    font-size: 13px;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-meta {
+    display: inline-flex;
+    gap: 40px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0.2em; */
+    font-size: 14px;
+  }
+  
+  .footer-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #313131;
+  }
+  
+  .footer-socials a {
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1100px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content {
+      max-width: 600px;
+      margin: 0 40px 40px 40px;
+    }
+  
+    .profile-card {
+      margin: 40px 40px 0 40px;
+    }
+  
+    .cta-row {
+      justify-content: center;
+    }
+  
+    .site-header,
+    .site-footer {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  
+    .hero-bg {
+      max-width: 90vw;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .page {
+      padding: 0 18px 32px;
+    }
+  
+    .site-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .profile-card {
+      width: 100%;
+      margin: 30px 30px 0 30px;
+    }
+  
+    .hero-content {
+      margin: 0 30px 30px 30px;
+    }
+  
+    .footer-meta {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .hero-bg {
+      max-width: 90vw;
+    }
+  }
+
+  /* Resume Page Styles */
+
+  .resume-main {
+    max-width: 800px;
+    margin: 40px auto 80px;
+    padding: 0 40px;
+  }
+
+  .resume-title {
+    margin: 0 0 48px;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .resume-section {
+    margin-bottom: 60px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 32px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--divider);
+    color: var(--text);
+  }
+
+  .resume-block {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .resume-block:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .block-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .block-date {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .block-company {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0f57ff;
+  }
+
+  .block-description {
+    margin: 0;
+    line-height: 1.7;
+    color: #3a3a3d;
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    .resume-main {
+      padding: 0 20px;
+    }
+
+    .resume-block {
+      padding: 20px 24px;
+    }
+
+    .block-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
