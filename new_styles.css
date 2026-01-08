@@ -446,6 +446,21 @@
     font-size: 15px;
   }
 
+  .block-description ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+  }
+
+  .block-description a {
+    color: #0f57ff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+
+  .block-description a:hover {
+    color: #0d46cc;
+  }
+
   @media (max-width: 640px) {
     .resume-main {
       padding: 0 20px;
